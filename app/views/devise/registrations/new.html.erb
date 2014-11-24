@@ -1,0 +1,20 @@
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+  <div class="jumbotron" style="opacity: 0.8; width: 45%; margin-left: auto; margin-right: auto;">
+  <div class="form-group" style="position: relative; margin-right: auto; margin: auto; width: 40%;">
+		<h2>Sign up</h2>
+	  	<div class="form-inputs">
+		    <%= f.input_field :email, required: true, autofocus: true, class: 'form-control', placeholder: 'email address', style: 'width: 200px; margin: 5px 0px 5px 0px;' %>
+		    <%= f.input_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) , style: 'width: 200px; margin: 5px 0px 5px 0px;', class: 'form-control', placeholder: 'password' %>
+		    <%= f.input_field :password_confirmation, required: true, style: 'width: 200px; margin: 5px 0px 5px 0px;', class: 'form-control', placeholder: 'password confirmation'%>
+	  	</div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up", style: 'width: 200px; margin: 5px 0px 5px 0px;', class: "btn btn-lg btn-primary btn-block" %>
+  </div>
+</div>
+</div>
+<% end %>
+
+

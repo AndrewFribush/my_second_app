@@ -1,0 +1,11 @@
+<%= simple_form_for @tweet do |f| %>
+  <%= f.input :tweet %>
+  <%= f.button :submit %>
+<% end %>
+<br>
+Here are all my tweets: <br><br>
+<ul>
+	<% @tweets.each do |tweet| %>
+		<li><%= tweet.tweet %></li>
+	<% end %>
+<ul>
